@@ -7,14 +7,12 @@ namespace Dealership {
   {
     public static void Main()
     {
-      Car porsche = new Car("2014 Porsche 911", 114991, 7864);
-      Car ford = new Car("2011 Ford F450", 55995, 14241);
-      Car lexus = new Car("2013 Lexus RX 350", 44700, 20000);
-      Car mercedes = new Car("Mercedes Benz CLS550", 39900, 37979);
+      Car porsche = new Car("2014 Porsche 911", 114991, 7864, "sick car");
+      Car ford = new Car("2011 Ford F450", 55995, 14241, "total piece of junk");
+      Car lexus = new Car("2013 Lexus RX 350", 44700, 20000, "drive away today!");
+      Car mercedes = new Car("Mercedes Benz CLS550", 39900, 37979, "who wants a benzo?");
 
       List<Car> Cars = new List<Car>() { porsche, ford, lexus, mercedes };
-
-      lexus.SetPrice(2000);
 
       Console.WriteLine("Enter maximum price: ");
       string stringMaxPrice = Console.ReadLine();
@@ -36,6 +34,7 @@ namespace Dealership {
         Console.WriteLine(automobile.GetMakeModel());
         Console.WriteLine(automobile.GetMiles() + " miles");
         Console.WriteLine("$" + automobile.GetPrice());
+        Console.WriteLine(automobile.GetMessage());
       }
     }
   }
