@@ -1,0 +1,25 @@
+@using CarDealer.Models;
+
+<h1>Cars for sale</h1>
+<ul>
+@if (Model.Count == 0)
+{
+  <p>You have no cars in your list!</p>
+}
+@if(Model.Count != 0)
+{
+  foreach (Car car in Model)
+  {
+    <li> 
+        Model - @car.GetModel()  <br>
+       Price - @car.GetPrice()  <br>
+        Miles - @car.GetMiles()  <br>
+        Description - @car.GetDescription()
+    </li>
+    
+  }
+  
+}
+
+</ul>
+<a href="/cars/new">Add a new car.</a>
